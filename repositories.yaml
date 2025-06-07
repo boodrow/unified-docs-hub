@@ -1,0 +1,1917 @@
+# Unified Documentation Hub - Curated Repository List
+# Combines hand-curated high-quality sources with auto-discovered popular repos
+
+# Configuration for automatic discovery
+discovery:
+  enabled: true
+  min_stars_tiers:
+    - stars: 50000
+      description: "Tier 1 - Most popular repositories"
+    - stars: 10000
+      description: "Tier 2 - Very popular repositories"
+    - stars: 5000
+      description: "Tier 3 - Popular repositories"
+  default_doc_paths:
+    - "README.md"
+    - "readme.md"
+    - "docs"
+    - "documentation"
+    - "CONTRIBUTING.md"
+    - "wiki"
+
+# Hand-curated repositories with enhanced metadata
+curated_repositories:
+  # AI/ML Documentation
+  - name: "Hugging Face Transformers"
+    repo: "huggingface/transformers"
+    category: "AI/ML"
+    description: "State-of-the-art Machine Learning for PyTorch, TensorFlow, and JAX"
+    doc_paths:
+      - "docs/source"
+      - "README.md"
+    topics: ["nlp", "transformers", "deep-learning", "pytorch", "tensorflow"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "PyTorch"
+    repo: "pytorch/pytorch"
+    category: "AI/ML"
+    description: "Tensors and Dynamic neural networks in Python"
+    doc_paths:
+      - "docs/source"
+      - "README.md"
+    topics: ["deep-learning", "neural-networks", "machine-learning", "tensors"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "LangChain"
+    repo: "langchain-ai/langchain"
+    category: "AI/ML"
+    description: "Building applications with LLMs through composability"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["llm", "agents", "rag", "chains", "ai-applications"]
+    quality_score: 9
+    priority: "high"
+    
+  - name: "scikit-learn"
+    repo: "scikit-learn/scikit-learn"
+    category: "AI/ML"
+    description: "Machine learning in Python"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["machine-learning", "data-science", "classification", "regression"]
+    quality_score: 10
+    priority: "high"
+
+  # Web Development
+  - name: "React"
+    repo: "facebook/react"
+    category: "Web Development"
+    description: "A JavaScript library for building user interfaces"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["javascript", "ui", "frontend", "components", "hooks"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "FastAPI"
+    repo: "tiangolo/fastapi"
+    category: "Web Development"
+    description: "Modern, fast web framework for building APIs with Python"
+    doc_paths:
+      - "docs"
+      - "docs_src"
+      - "README.md"
+    topics: ["python", "api", "rest", "async", "openapi"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Next.js"
+    repo: "vercel/next.js"
+    category: "Web Development"
+    description: "The React Framework for Production"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["react", "ssr", "ssg", "fullstack", "vercel"]
+    quality_score: 9
+    priority: "high"
+    
+  - name: "Vue.js"
+    repo: "vuejs/core"
+    category: "Web Development"
+    description: "Progressive JavaScript Framework"
+    doc_paths:
+      - "packages/vue/README.md"
+    topics: ["javascript", "frontend", "reactive", "components"]
+    quality_score: 9
+    priority: "high"
+
+  # Data Science
+  - name: "Pandas"
+    repo: "pandas-dev/pandas"
+    category: "Data Science"
+    description: "Powerful data structures for data analysis"
+    doc_paths:
+      - "doc/source"
+      - "README.md"
+    topics: ["dataframes", "data-analysis", "python", "time-series"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "NumPy"
+    repo: "numpy/numpy"
+    category: "Data Science"
+    description: "The fundamental package for scientific computing with Python"
+    doc_paths:
+      - "doc/source"
+      - "README.md"
+    topics: ["arrays", "scientific-computing", "mathematics", "linear-algebra"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Matplotlib"
+    repo: "matplotlib/matplotlib"
+    category: "Data Science"
+    description: "Comprehensive library for creating static visualizations"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["visualization", "plotting", "charts", "graphs"]
+    quality_score: 9
+    priority: "medium"
+
+  # Programming Languages
+  - name: "Python Documentation"
+    repo: "python/cpython"
+    category: "Programming Languages"
+    description: "Official Python programming language documentation"
+    doc_paths:
+      - "Doc"
+      - "README.rst"
+    topics: ["python", "language", "stdlib", "tutorials"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Rust Book"
+    repo: "rust-lang/book"
+    category: "Programming Languages"
+    description: "The Rust Programming Language book"
+    doc_paths:
+      - "src"
+      - "README.md"
+    topics: ["rust", "systems-programming", "memory-safety", "ownership"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "TypeScript"
+    repo: "microsoft/TypeScript"
+    category: "Programming Languages"
+    description: "TypeScript language documentation and handbook"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["typescript", "javascript", "types", "static-typing"]
+    quality_score: 9
+    priority: "high"
+
+  # Cloud/DevOps
+  - name: "Kubernetes"
+    repo: "kubernetes/website"
+    category: "Cloud/DevOps"
+    description: "Kubernetes documentation"
+    doc_paths:
+      - "content/en/docs"
+      - "README.md"
+    topics: ["kubernetes", "containers", "orchestration", "cloud-native"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Docker"
+    repo: "docker/docs"
+    category: "Cloud/DevOps"
+    description: "Docker documentation"
+    doc_paths:
+      - "content"
+      - "README.md"
+    topics: ["docker", "containers", "deployment", "virtualization"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Terraform"
+    repo: "hashicorp/terraform"
+    category: "Cloud/DevOps"
+    description: "Infrastructure as Code"
+    doc_paths:
+      - "website/docs"
+      - "README.md"
+    topics: ["iac", "infrastructure", "cloud", "automation"]
+    quality_score: 9
+    priority: "medium"
+
+  # Databases
+  - name: "PostgreSQL"
+    repo: "postgres/postgres"
+    category: "Databases"
+    description: "Advanced open source relational database"
+    doc_paths:
+      - "doc/src/sgml"
+      - "README"
+    topics: ["sql", "database", "relational", "acid"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Redis"
+    repo: "redis/redis"
+    category: "Databases"
+    description: "In-memory data structure store"
+    doc_paths:
+      - "README.md"
+    topics: ["nosql", "cache", "in-memory", "key-value"]
+    quality_score: 9
+    priority: "medium"
+
+  # Tools & Utilities
+  - name: "Git"
+    repo: "git/git"
+    category: "Tools"
+    description: "Distributed version control system"
+    doc_paths:
+      - "Documentation"
+      - "README.md"
+    topics: ["version-control", "vcs", "collaboration", "branching"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "VS Code"
+    repo: "microsoft/vscode"
+    category: "Tools"
+    description: "Visual Studio Code documentation"
+    doc_paths:
+      - "README.md"
+      - "docs"
+    topics: ["editor", "ide", "development", "extensions"]
+    quality_score: 9
+    priority: "high"
+
+  # Mobile Development
+  - name: "React Native"
+    repo: "facebook/react-native"
+    category: "Mobile Development"
+    description: "Framework for building native mobile apps using React"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["react-native", "mobile", "ios", "android", "javascript"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Flutter Documentation"
+    repo: "flutter/website"
+    category: "Mobile Development"  
+    description: "Official Flutter documentation and website"
+    doc_paths:
+      - "src/docs"
+      - "README.md"
+    topics: ["flutter", "dart", "mobile", "cross-platform", "ui"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Expo"
+    repo: "expo/expo"
+    category: "Mobile Development"
+    description: "Platform for making universal native apps with React"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["expo", "react-native", "mobile", "development-tools"]
+    quality_score: 9
+    priority: "high"
+
+  # Security
+  - name: "OWASP Top 10"
+    repo: "OWASP/Top10"
+    category: "Security"
+    description: "OWASP Top 10 security risks documentation"
+    doc_paths:
+      - "README.md"
+    topics: ["security", "owasp", "vulnerabilities", "best-practices"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "OWASP CheatSheetSeries"
+    repo: "OWASP/CheatSheetSeries"
+    category: "Security"
+    description: "Collection of high value security cheat sheets"
+    doc_paths:
+      - "cheatsheets"
+      - "README.md"
+    topics: ["security", "cheatsheets", "best-practices", "defense"]
+    quality_score: 10
+    priority: "high"
+
+  # Testing
+  - name: "Jest"
+    repo: "facebook/jest"
+    category: "Testing"
+    description: "Delightful JavaScript Testing Framework"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["testing", "javascript", "unit-testing", "mocking"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Playwright"
+    repo: "microsoft/playwright"
+    category: "Testing"
+    description: "Reliable end-to-end testing for modern web apps"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["testing", "e2e", "automation", "browser-testing"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Cypress"
+    repo: "cypress-io/cypress"
+    category: "Testing"
+    description: "Fast, easy and reliable testing for anything that runs in a browser"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["testing", "e2e", "javascript", "automation"]
+    quality_score: 9
+    priority: "high"
+
+  # More AI/ML
+  - name: "OpenAI Cookbook"
+    repo: "openai/openai-cookbook"
+    category: "AI/ML"
+    description: "Examples and guides for using the OpenAI API"
+    doc_paths:
+      - "examples"
+      - "README.md"
+    topics: ["openai", "gpt", "llm", "api", "examples"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Stable Diffusion"
+    repo: "CompVis/stable-diffusion"
+    category: "AI/ML"
+    description: "Latent text-to-image diffusion model"
+    doc_paths:
+      - "README.md"
+    topics: ["stable-diffusion", "image-generation", "deep-learning", "diffusion"]
+    quality_score: 9
+    priority: "high"
+
+  # More Web Development
+  - name: "Svelte"
+    repo: "sveltejs/svelte"
+    category: "Web Development"
+    description: "Cybernetically enhanced web apps"
+    doc_paths:
+      - "documentation"
+      - "README.md"
+    topics: ["svelte", "frontend", "compiler", "reactive", "javascript"]
+    quality_score: 9
+    priority: "high"
+    
+  - name: "Tailwind CSS"
+    repo: "tailwindlabs/tailwindcss"
+    category: "Web Development"
+    description: "Utility-first CSS framework"
+    doc_paths:
+      - "README.md"
+    topics: ["css", "tailwind", "utility-first", "styling", "frontend"]
+    quality_score: 9
+    priority: "high"
+    
+  - name: "Vite"
+    repo: "vitejs/vite"
+    category: "Web Development"
+    description: "Next Generation Frontend Tooling"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["vite", "build-tool", "dev-server", "bundler", "esm"]
+    quality_score: 9
+    priority: "high"
+
+  # More Cloud/DevOps
+  - name: "Ansible"
+    repo: "ansible/ansible"
+    category: "Cloud/DevOps"
+    description: "Automation platform for configuration management"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["ansible", "automation", "configuration-management", "iac"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Prometheus"
+    repo: "prometheus/prometheus"
+    category: "Cloud/DevOps"
+    description: "Monitoring system and time series database"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["monitoring", "metrics", "observability", "alerting"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "GitHub Actions"
+    repo: "actions/starter-workflows"
+    category: "Cloud/DevOps"
+    description: "Starter workflows for GitHub Actions"
+    doc_paths:
+      - "README.md"
+    topics: ["github-actions", "ci-cd", "automation", "workflows"]
+    quality_score: 9
+    priority: "high"
+
+  # More Databases
+  - name: "MongoDB"
+    repo: "mongodb/docs"
+    category: "Databases"
+    description: "MongoDB documentation"
+    doc_paths:
+      - "source"
+      - "README.rst"
+    topics: ["mongodb", "nosql", "document-database", "database"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Elasticsearch"
+    repo: "elastic/elasticsearch"
+    category: "Databases"
+    description: "Distributed search and analytics engine"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["elasticsearch", "search", "analytics", "lucene"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Apache Kafka"
+    repo: "apache/kafka"
+    category: "Databases"
+    description: "Distributed event streaming platform"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["kafka", "streaming", "messaging", "events"]
+    quality_score: 10
+    priority: "high"
+
+  # System Programming
+  - name: "Linux Kernel"
+    repo: "torvalds/linux"
+    category: "System Programming"
+    description: "Linux kernel source tree"
+    doc_paths:
+      - "Documentation"
+      - "README"
+    topics: ["linux", "kernel", "operating-system", "c"]
+    quality_score: 10
+    priority: "medium"
+    
+  - name: "LLVM"
+    repo: "llvm/llvm-project"
+    category: "System Programming"
+    description: "LLVM Compiler Infrastructure"
+    doc_paths:
+      - "llvm/docs"
+      - "README.md"
+    topics: ["llvm", "compiler", "toolchain", "optimization"]
+    quality_score: 10
+    priority: "medium"
+
+  # API Development
+  - name: "GraphQL"
+    repo: "graphql/graphql-js"
+    category: "API Development"
+    description: "GraphQL reference implementation for JavaScript"
+    doc_paths:
+      - "README.md"
+    topics: ["graphql", "api", "javascript", "schema", "query-language"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Apollo Server"
+    repo: "apollographql/apollo-server"
+    category: "API Development"
+    description: "GraphQL server for Express, Connect, Hapi, Koa and more"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["apollo", "graphql", "server", "api", "nodejs"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "gRPC"
+    repo: "grpc/grpc"
+    category: "API Development"
+    description: "High performance, open source universal RPC framework"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["grpc", "rpc", "api", "protobuf", "microservices"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Swagger/OpenAPI"
+    repo: "swagger-api/swagger-ui"
+    category: "API Development"
+    description: "Swagger UI for visualizing APIs"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["swagger", "openapi", "api", "documentation", "rest"]
+    quality_score: 9
+    priority: "high"
+
+  # DevTools
+  - name: "Chrome DevTools"
+    repo: "ChromeDevTools/devtools-frontend"
+    category: "DevTools"
+    description: "Chrome DevTools frontend"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["devtools", "chrome", "debugging", "performance", "frontend"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Webpack"
+    repo: "webpack/webpack"
+    category: "DevTools"
+    description: "Bundle your assets for the web"
+    doc_paths:
+      - "README.md"
+    topics: ["webpack", "bundler", "build-tool", "module-bundler", "javascript"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "ESLint"
+    repo: "eslint/eslint"
+    category: "DevTools"
+    description: "JavaScript linting utility"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["eslint", "linter", "javascript", "code-quality", "static-analysis"]
+    quality_score: 10
+    priority: "high"
+
+  # More Programming Languages
+  - name: "Go"
+    repo: "golang/go"
+    category: "Programming Languages"
+    description: "The Go programming language"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["go", "golang", "programming-language", "compiler"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Swift"
+    repo: "apple/swift"
+    category: "Programming Languages"
+    description: "The Swift Programming Language"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["swift", "apple", "ios", "programming-language", "compiler"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Kotlin"
+    repo: "JetBrains/kotlin"
+    category: "Programming Languages"
+    description: "The Kotlin Programming Language"
+    doc_paths:
+      - "docs"
+      - "readme.md"
+    topics: ["kotlin", "jvm", "android", "programming-language", "jetbrains"]
+    quality_score: 10
+    priority: "high"
+
+  # Frontend Frameworks
+  - name: "Angular"
+    repo: "angular/angular"
+    category: "Web Development"
+    description: "The modern web developer's platform"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["angular", "typescript", "frontend", "spa", "framework"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Ember.js"
+    repo: "emberjs/ember.js"
+    category: "Web Development"
+    description: "A framework for ambitious web developers"
+    doc_paths:
+      - "README.md"
+    topics: ["ember", "javascript", "frontend", "framework", "mvc"]
+    quality_score: 8
+    priority: "medium"
+
+  # State Management
+  - name: "Redux"
+    repo: "reduxjs/redux"
+    category: "State Management"
+    description: "Predictable state container for JavaScript apps"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["redux", "state-management", "javascript", "react", "flux"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "MobX"
+    repo: "mobxjs/mobx"
+    category: "State Management"
+    description: "Simple, scalable state management"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mobx", "state-management", "reactive", "javascript", "observable"]
+    quality_score: 9
+    priority: "high"
+    
+  - name: "Zustand"
+    repo: "pmndrs/zustand"
+    category: "State Management"
+    description: "Bear necessities for state management in React"
+    doc_paths:
+      - "readme.md"
+    topics: ["zustand", "state-management", "react", "javascript", "hooks"]
+    quality_score: 9
+    priority: "medium"
+
+  # Game Development
+  - name: "Unity"
+    repo: "Unity-Technologies/UnityCsReference"
+    category: "Game Development"
+    description: "Unity C# reference source code"
+    doc_paths:
+      - "README.md"
+    topics: ["unity", "game-engine", "csharp", "3d", "game-development"]
+    quality_score: 9
+    priority: "medium"
+    
+  - name: "Godot"
+    repo: "godotengine/godot"
+    category: "Game Development"
+    description: "Multi-platform 2D and 3D game engine"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["godot", "game-engine", "open-source", "3d", "2d"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Phaser"
+    repo: "photonstorm/phaser"
+    category: "Game Development"
+    description: "Fun, free and fast 2D game framework for HTML5"
+    doc_paths:
+      - "README.md"
+    topics: ["phaser", "game-framework", "javascript", "html5", "2d-games"]
+    quality_score: 9
+    priority: "medium"
+
+  # Backend Frameworks
+  - name: "Django"
+    repo: "django/django"
+    category: "Web Development"
+    description: "The Web framework for perfectionists with deadlines"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["django", "python", "web-framework", "backend", "orm"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Ruby on Rails"
+    repo: "rails/rails"
+    category: "Web Development"
+    description: "Ruby on Rails web application framework"
+    doc_paths:
+      - "guides"
+      - "README.md"
+    topics: ["rails", "ruby", "web-framework", "mvc", "backend"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Spring Boot"
+    repo: "spring-projects/spring-boot"
+    category: "Web Development"
+    description: "Spring Boot framework"
+    doc_paths:
+      - "spring-boot-project/spring-boot-docs"
+      - "README.adoc"
+    topics: ["spring", "java", "spring-boot", "microservices", "backend"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Express.js"
+    repo: "expressjs/express"
+    category: "Web Development"
+    description: "Fast, unopinionated, minimalist web framework for Node.js"
+    doc_paths:
+      - "Readme.md"
+    topics: ["express", "nodejs", "javascript", "web-framework", "backend"]
+    quality_score: 10
+    priority: "high"
+
+  # AI Agents & Frameworks
+  - name: "DSPy"
+    repo: "stanfordnlp/dspy"
+    category: "AI/ML"
+    description: "Framework for programming—not prompting—language models"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["dspy", "llm", "ai", "agents", "prompting", "framework"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "MCP Agent"
+    repo: "lastmile-ai/mcp-agent"
+    category: "AI/ML"
+    description: "Build effective agents using Model Context Protocol and simple workflow patterns"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mcp", "agents", "ai", "workflow", "automation"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Cognee"
+    repo: "topoteretes/cognee"
+    category: "AI/ML"
+    description: "Memory for AI Agents in 5 lines of code"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["cognee", "ai", "agents", "memory", "rag"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Archon"
+    repo: "coleam00/Archon"
+    category: "AI/ML"
+    description: "AI agent that creates other AI agents using advanced agentic coding workflow"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["archon", "ai", "agents", "meta-agents", "automation"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "LLM Course"
+    repo: "mlabonne/llm-course"
+    category: "AI/ML"
+    description: "Course to get into Large Language Models with roadmaps and Colab notebooks"
+    doc_paths:
+      - "README.md"
+    topics: ["llm", "course", "tutorial", "ai", "education"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "RAGbits"
+    repo: "deepsense-ai/ragbits"
+    category: "AI/ML"
+    description: "Building blocks for rapid development of GenAI applications"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["rag", "genai", "ai", "llm", "framework"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Unsloth Notebooks"
+    repo: "unslothai/notebooks"
+    category: "AI/ML"
+    description: "Fine-tune LLMs for free with guided Notebooks on Google Colab"
+    doc_paths:
+      - "README.md"
+    topics: ["llm", "fine-tuning", "notebooks", "colab", "ai"]
+    quality_score: 10
+    priority: "high"
+
+  # Remote Desktop & Networking
+  - name: "RustDesk"
+    repo: "rustdesk/rustdesk"
+    category: "Tools"
+    description: "Open-source remote desktop application designed for self-hosting"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["rustdesk", "remote-desktop", "rust", "self-hosted", "teamviewer-alternative"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "NetBird"
+    repo: "netbirdio/netbird"
+    category: "Cloud/DevOps"
+    description: "Connect devices into secure WireGuard-based overlay network with SSO, MFA"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["netbird", "wireguard", "vpn", "networking", "security"]
+    quality_score: 10
+    priority: "high"
+
+  # Development Tools & Education
+  - name: "Onlook"
+    repo: "onlook-dev/onlook"
+    category: "DevTools"
+    description: "The Cursor for Designers - Visual Vibeecoding Editor for React"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["onlook", "visual-editor", "react", "design", "development"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Note Gen"
+    repo: "codexu/note-gen"
+    category: "Tools"
+    description: "Cross-platform Markdown note-taking app using AI to bridge recording and writing"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["note-taking", "markdown", "ai", "knowledge-management", "productivity"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Coding Interview University"
+    repo: "jwasham/coding-interview-university"
+    category: "Education"
+    description: "Complete computer science study plan to become a software engineer"
+    doc_paths:
+      - "README.md"
+    topics: ["interview", "computer-science", "education", "algorithms", "study-plan"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Project Based Learning"
+    repo: "practical-tutorials/project-based-learning"
+    category: "Education"
+    description: "Curated list of project-based tutorials"
+    doc_paths:
+      - "README.md"
+    topics: ["tutorials", "projects", "learning", "education", "programming"]
+    quality_score: 10
+    priority: "high"
+
+  # Robotics & Hardware
+  - name: "ArduPilot"
+    repo: "ArduPilot/ardupilot"
+    category: "Robotics"
+    description: "ArduPlane, ArduCopter, ArduRover, ArduSub source"
+    doc_paths:
+      - "libraries"
+      - "README.md"
+    topics: ["ardupilot", "drone", "robotics", "autopilot", "uav"]
+    quality_score: 10
+    priority: "high"
+
+  # Blockchain & Crypto
+  - name: "OpenZeppelin Contracts"
+    repo: "OpenZeppelin/openzeppelin-contracts"
+    category: "Blockchain"
+    description: "Library for secure smart contract development"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["blockchain", "ethereum", "smart-contracts", "solidity", "security"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Hardhat"
+    repo: "NomicFoundation/hardhat"
+    category: "Blockchain"
+    description: "Ethereum development environment for professionals"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["hardhat", "ethereum", "blockchain", "development", "testing"]
+    quality_score: 10
+    priority: "high"
+
+  # Data Engineering
+  - name: "Apache Airflow"
+    repo: "apache/airflow"
+    category: "Data Engineering"
+    description: "Platform to programmatically author, schedule and monitor workflows"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["airflow", "workflow", "data-pipeline", "orchestration", "etl"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "dbt"
+    repo: "dbt-labs/dbt-core"
+    category: "Data Engineering"
+    description: "Transform data in your warehouse"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["dbt", "data-transformation", "analytics", "sql", "data-engineering"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Great Expectations"
+    repo: "great-expectations/great_expectations"
+    category: "Data Engineering"
+    description: "Always know what to expect from your data"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["data-quality", "testing", "validation", "data-engineering", "python"]
+    quality_score: 10
+    priority: "high"
+
+  # Infrastructure as Code
+  - name: "Pulumi"
+    repo: "pulumi/pulumi"
+    category: "Cloud/DevOps"
+    description: "Infrastructure as Code using real programming languages"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["pulumi", "iac", "infrastructure", "cloud", "automation"]
+    quality_score: 10
+    priority: "high"
+    
+  - name: "Terragrunt"
+    repo: "gruntwork-io/terragrunt"
+    category: "Cloud/DevOps"
+    description: "Thin wrapper for Terraform that provides extra tools"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["terragrunt", "terraform", "iac", "infrastructure", "devops"]
+    quality_score: 10
+    priority: "high"
+
+  # Observability and Monitoring
+  - name: "Prometheus"
+    repo: "prometheus/prometheus"
+    category: "Observability"
+    description: "The Prometheus monitoring system and time series database"
+    doc_paths:
+      - "docs"
+      - "documentation"
+      - "README.md"
+    topics: ["monitoring", "metrics", "observability", "timeseries", "alerting"]
+    quality_score: 95
+    priority: 1
+
+  - name: "Grafana"
+    repo: "grafana/grafana"
+    category: "Observability"
+    description: "The open and composable observability and data visualization platform"
+    doc_paths:
+      - "docs"
+      - "contribute"
+      - "README.md"
+    topics: ["monitoring", "visualization", "observability", "dashboard", "metrics"]
+    quality_score: 95
+    priority: 1
+
+  - name: "OpenTelemetry"
+    repo: "open-telemetry/opentelemetry-js"
+    category: "Observability"
+    description: "OpenTelemetry JavaScript Client for observability framework"
+    doc_paths:
+      - "doc"
+      - "README.md"
+      - "getting-started"
+    topics: ["observability", "tracing", "metrics", "monitoring", "telemetry"]
+    quality_score: 93
+    priority: 1
+
+  - name: "Jaeger"
+    repo: "jaegertracing/jaeger"
+    category: "Observability"
+    description: "CNCF Jaeger, a distributed tracing platform"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["tracing", "observability", "monitoring", "distributed-tracing", "opentracing"]
+    quality_score: 92
+    priority: 1
+
+  - name: "SigNoz"
+    repo: "SigNoz/signoz"
+    category: "Observability"
+    description: "SigNoz is an open-source observability platform native to OpenTelemetry"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["observability", "monitoring", "apm", "tracing", "opentelemetry"]
+    quality_score: 90
+    priority: 2
+
+  # MLOps Tools
+  - name: "MLflow"
+    repo: "mlflow/mlflow"
+    category: "MLOps"
+    description: "Open source platform for the machine learning lifecycle"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["mlops", "machine-learning", "ml-lifecycle", "experiment-tracking", "model-registry"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Kubeflow"
+    repo: "kubeflow/kubeflow"
+    category: "MLOps"
+    description: "Machine Learning Toolkit for Kubernetes"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mlops", "kubernetes", "machine-learning", "ml-pipelines", "distributed-training"]
+    quality_score: 93
+    priority: 1
+
+  - name: "Metaflow"
+    repo: "Netflix/metaflow"
+    category: "MLOps"
+    description: "Build and manage real-life data science projects with ease"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mlops", "data-science", "workflow", "machine-learning", "python"]
+    quality_score: 92
+    priority: 1
+
+  - name: "DVC"
+    repo: "iterative/dvc"
+    category: "MLOps"
+    description: "Data Version Control - Git for Data & Models"
+    doc_paths:
+      - "content/docs"
+      - "README.md"
+    topics: ["mlops", "data-versioning", "machine-learning", "git", "reproducibility"]
+    quality_score: 91
+    priority: 1
+
+  - name: "Kedro"
+    repo: "kedro-org/kedro"
+    category: "MLOps"
+    description: "A Python framework for creating reproducible, maintainable ML code"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mlops", "python", "data-pipeline", "machine-learning", "framework"]
+    quality_score: 90
+    priority: 2
+
+  - name: "Weights & Biases"
+    repo: "wandb/wandb"
+    category: "MLOps"
+    description: "A tool for visualizing and tracking machine learning experiments"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mlops", "experiment-tracking", "visualization", "machine-learning", "collaboration"]
+    quality_score: 91
+    priority: 1
+
+  # Desktop Frameworks
+  - name: "Electron"
+    repo: "electron/electron"
+    category: "Desktop Frameworks"
+    description: "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["desktop", "electron", "cross-platform", "javascript", "native"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Tauri"
+    repo: "tauri-apps/tauri"
+    category: "Desktop Frameworks"
+    description: "Build smaller, faster, and more secure desktop applications with Rust"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["desktop", "rust", "cross-platform", "webview", "secure"]
+    quality_score: 93
+    priority: 1
+
+  - name: "Flutter Desktop"
+    repo: "flutter/flutter"
+    category: "Desktop Frameworks"
+    description: "Flutter makes it easy to build beautiful apps for mobile, web, and desktop"
+    doc_paths:
+      - "docs"
+      - "README.md"
+      - "dev/docs"
+    topics: ["flutter", "desktop", "cross-platform", "dart", "ui"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Wails"
+    repo: "wailsapp/wails"
+    category: "Desktop Frameworks"
+    description: "Create desktop apps using Go and web technologies"
+    doc_paths:
+      - "website/docs"
+      - "README.md"
+    topics: ["desktop", "go", "cross-platform", "webview", "native"]
+    quality_score: 91
+    priority: 2
+
+  - name: "Neutralino"
+    repo: "neutralinojs/neutralinojs"
+    category: "Desktop Frameworks"
+    description: "Portable and lightweight cross-platform desktop application development framework"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["desktop", "lightweight", "cross-platform", "javascript", "native"]
+    quality_score: 89
+    priority: 2
+
+  # Analytics and Business Intelligence
+  - name: "Apache Superset"
+    repo: "apache/superset"
+    category: "Analytics & BI"
+    description: "Apache Superset is a modern data exploration and visualization platform"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["analytics", "bi", "visualization", "dashboard", "data-exploration"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Metabase"
+    repo: "metabase/metabase"
+    category: "Analytics & BI"
+    description: "The simplest, fastest way to get business intelligence and analytics to everyone"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["analytics", "bi", "visualization", "business-intelligence", "dashboard"]
+    quality_score: 93
+    priority: 1
+
+  - name: "Redash"
+    repo: "getredash/redash"
+    category: "Analytics & BI"
+    description: "Make Your Company Data Driven. Connect to any data source, easily visualize, dashboard and share data"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["analytics", "bi", "visualization", "sql", "dashboard"]
+    quality_score: 91
+    priority: 1
+
+  - name: "Apache Druid"
+    repo: "apache/druid"
+    category: "Analytics & BI"
+    description: "A high performance real-time analytics database"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["analytics", "realtime", "olap", "database", "timeseries"]
+    quality_score: 92
+    priority: 1
+
+  - name: "ClickHouse"
+    repo: "ClickHouse/ClickHouse"
+    category: "Analytics & BI"
+    description: "ClickHouse® is a real-time analytics DBMS"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["analytics", "database", "olap", "realtime", "sql"]
+    quality_score: 94
+    priority: 1
+
+  # Trading & Finance Category
+  - name: "Freqtrade"
+    repo: "freqtrade/freqtrade"
+    category: "Trading & Finance"
+    description: "Free, open source crypto trading bot with backtesting, strategy optimization, and live trading"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["crypto", "trading", "bot", "algorithmic-trading", "backtesting", "strategy", "python"]
+    quality_score: 95
+    priority: 1
+
+  - name: "Zipline"
+    repo: "quantopian/zipline"
+    category: "Trading & Finance"
+    description: "Algorithmic trading library for backtesting trading strategies"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["trading", "backtesting", "finance", "algorithmic-trading", "quantitative-finance"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Backtrader"
+    repo: "mementum/backtrader"
+    category: "Trading & Finance"
+    description: "Python backtesting library for trading strategies with live trading support"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["backtesting", "trading", "finance", "python", "strategy", "live-trading"]
+    quality_score: 93
+    priority: 1
+
+  - name: "CCXT"
+    repo: "ccxt/ccxt"
+    category: "Trading & Finance"
+    description: "Cryptocurrency exchange trading library supporting 100+ exchanges"
+    doc_paths:
+      - "wiki"
+      - "README.md"
+    topics: ["crypto", "trading", "api", "cryptocurrency", "exchange", "bitcoin"]
+    quality_score: 95
+    priority: 1
+
+  - name: "Jesse"
+    repo: "jesse-ai/jesse"
+    category: "Trading & Finance"
+    description: "Advanced crypto trading bot framework with AI capabilities"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["crypto", "trading", "bot", "ai", "backtesting", "strategy"]
+    quality_score: 92
+    priority: 1
+
+  - name: "Hummingbot"
+    repo: "hummingbot/hummingbot"
+    category: "Trading & Finance"
+    description: "Open source trading bot for crypto market making and arbitrage"
+    doc_paths:
+      - "documentation"
+      - "README.md"
+    topics: ["crypto", "trading", "bot", "market-making", "arbitrage", "defi"]
+    quality_score: 93
+    priority: 1
+
+  - name: "QuantLib"
+    repo: "lballabio/QuantLib"
+    category: "Trading & Finance"
+    description: "Comprehensive library for quantitative finance and derivatives pricing"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["quantitative-finance", "derivatives", "pricing", "risk-management", "cpp"]
+    quality_score: 95
+    priority: 1
+
+  - name: "TA-Lib"
+    repo: "TA-Lib/ta-lib-python"
+    category: "Trading & Finance"
+    description: "Technical analysis library with 200+ indicators for trading"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["technical-analysis", "indicators", "trading", "finance", "python"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Pandas-TA"
+    repo: "twopirllc/pandas-ta"
+    category: "Trading & Finance"
+    description: "Technical analysis indicators library built on Pandas"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["technical-analysis", "pandas", "indicators", "trading", "python"]
+    quality_score: 92
+    priority: 1
+
+  - name: "Gekko"
+    repo: "askmike/gekko"
+    category: "Trading & Finance"
+    description: "Trading bot and backtesting platform for cryptocurrency"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["crypto", "trading", "bot", "backtesting", "nodejs"]
+    quality_score: 91
+    priority: 2
+
+  - name: "VectorBT"
+    repo: "polakowo/vectorbt"
+    category: "Trading & Finance"
+    description: "Vectorized backtesting and trading analysis library"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["backtesting", "vectorized", "trading", "analysis", "python"]
+    quality_score: 93
+    priority: 1
+
+  - name: "Catalyst"
+    repo: "scrtlabs/catalyst"
+    category: "Trading & Finance"
+    description: "Algorithmic trading library for crypto-assets built on Zipline"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["crypto", "trading", "algorithmic-trading", "backtesting", "python"]
+    quality_score: 91
+    priority: 2
+
+  - name: "PyAlgoTrade"
+    repo: "gbeced/pyalgotrade"
+    category: "Trading & Finance"
+    description: "Python algorithmic trading library with event-driven backtesting"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["algorithmic-trading", "backtesting", "python", "event-driven"]
+    quality_score: 90
+    priority: 2
+
+  - name: "Backtest.py"
+    repo: "kernc/backtesting.py"
+    category: "Trading & Finance"
+    description: "Simple and pythonic backtesting library for trading strategies"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["backtesting", "trading", "python", "strategy", "simple"]
+    quality_score: 92
+    priority: 1
+
+  - name: "TradingView Charting Library"
+    repo: "tradingview/charting_library"
+    category: "Trading & Finance"
+    description: "Professional trading charts and technical analysis library"
+    doc_paths:
+      - "wiki"
+      - "README.md"
+    topics: ["charts", "trading", "technical-analysis", "visualization", "javascript"]
+    quality_score: 94
+    priority: 1
+
+  - name: "Lean"
+    repo: "QuantConnect/Lean"
+    category: "Trading & Finance"
+    description: "Algorithmic trading engine for backtesting and live trading"
+    doc_paths:
+      - "Documentation"
+      - "README.md"
+    topics: ["algorithmic-trading", "backtesting", "live-trading", "csharp", "quantconnect"]
+    quality_score: 94
+    priority: 1
+
+  - name: "OpenBB"
+    repo: "OpenBB-finance/OpenBB"
+    category: "Trading & Finance"
+    description: "Open source investment research platform with financial data and analysis"
+    doc_paths:
+      - "website/content"
+      - "README.md"
+    topics: ["finance", "investment", "research", "data", "analysis", "terminal"]
+    quality_score: 93
+    priority: 1
+
+  - name: "Awesome Quant"
+    repo: "wilsonfreitas/awesome-quant"
+    category: "Trading & Finance"
+    description: "Curated list of libraries, packages and resources for quantitative finance"
+    doc_paths:
+      - "README.md"
+    topics: ["quantitative-finance", "resources", "awesome-list", "trading", "finance"]
+    quality_score: 91
+    priority: 2
+
+  - name: "Awesome Systematic Trading"
+    repo: "wangzhe3224/awesome-systematic-trading"
+    category: "Trading & Finance"
+    description: "Curated list of resources for systematic and algorithmic trading"
+    doc_paths:
+      - "README.md"
+    topics: ["systematic-trading", "algorithmic-trading", "resources", "awesome-list"]
+    quality_score: 91
+    priority: 2
+
+  - name: "AlgoTrader"
+    repo: "LSEG/AlgoTrader"
+    category: "Trading & Finance"
+    description: "Professional algorithmic trading platform for quantitative hedge funds"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["algorithmic-trading", "professional", "hedge-fund", "java", "platform"]
+    quality_score: 92
+    priority: 1
+
+  - name: "XChange"
+    repo: "knowm/XChange"
+    category: "Trading & Finance"
+    description: "Java library for interacting with 60+ cryptocurrency exchanges"
+    doc_paths:
+      - "wiki"
+      - "README.md"
+    topics: ["crypto", "exchange", "api", "java", "trading"]
+    quality_score: 93
+    priority: 1
+
+  # Options Trading
+  - name: "OptionChain"
+    repo: "nakulnayyar/OptionChain"
+    category: "Trading & Finance"
+    description: "Options chain analysis and strategies for trading"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["options", "derivatives", "trading", "analysis", "python"]
+    quality_score: 88
+    priority: 2
+
+  - name: "Py-vollib"
+    repo: "vollib/py_vollib"
+    category: "Trading & Finance"
+    description: "Python library for pricing options and calculating Greeks"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["options", "black-scholes", "greeks", "pricing", "volatility"]
+    quality_score: 90
+    priority: 1
+
+  - name: "ThetaGang"
+    repo: "brndnmtthws/thetagang"
+    category: "Trading & Finance"
+    description: "Automated options trading bot for selling covered calls and cash-secured puts"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["options", "theta", "trading", "bot", "strategy"]
+    quality_score: 89
+    priority: 2
+
+  # Forex Trading
+  - name: "OANDA API"
+    repo: "oanda/v20-python"
+    category: "Trading & Finance"
+    description: "OANDA v20 API for forex and CFD trading"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["forex", "trading", "api", "cfd", "oanda"]
+    quality_score: 91
+    priority: 1
+
+  - name: "MetaTrader Python"
+    repo: "lucas-koehler/MetaTrader5-API-Python"
+    category: "Trading & Finance"
+    description: "Python integration for MetaTrader 5 forex trading platform"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["forex", "metatrader", "mt5", "trading", "api"]
+    quality_score: 89
+    priority: 2
+
+  - name: "Forex Python"
+    repo: "MicroPyramid/forex-python"
+    category: "Trading & Finance"
+    description: "Foreign exchange rates, currency conversion, and forex data"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["forex", "currency", "exchange-rates", "conversion", "python"]
+    quality_score: 88
+    priority: 2
+
+  # High-Frequency Trading
+  - name: "HFT"
+    repo: "evankirkiles/hft"
+    category: "Trading & Finance"
+    description: "High-frequency trading systems and market microstructure"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["hft", "high-frequency", "trading", "latency", "microstructure"]
+    quality_score: 87
+    priority: 2
+
+  - name: "Flash Boys"
+    repo: "vitorpamplona/FlashHighFrequencyTradingBot"
+    category: "Trading & Finance"
+    description: "High-frequency trading bot implementation"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["hft", "trading", "bot", "arbitrage", "latency"]
+    quality_score: 86
+    priority: 2
+
+  # Market Making & Liquidity
+  - name: "Avellaneda Market Making"
+    repo: "federicomariamassari/financial-engineering"
+    category: "Trading & Finance"
+    description: "Market making strategies including Avellaneda-Stoikov model"
+    doc_paths:
+      - "market-making"
+      - "README.md"
+    topics: ["market-making", "liquidity", "avellaneda", "strategy", "python"]
+    quality_score: 89
+    priority: 2
+
+  - name: "PyLOB"
+    repo: "ab-trader/PyLOB"
+    category: "Trading & Finance"
+    description: "Python limit order book implementation for market microstructure"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["order-book", "microstructure", "trading", "limit-orders", "python"]
+    quality_score: 88
+    priority: 2
+
+  # Arbitrage
+  - name: "Crypto Arbitrage"
+    repo: "maxme/bitcoin-arbitrage"
+    category: "Trading & Finance"
+    description: "Cryptocurrency arbitrage opportunity detection"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["arbitrage", "crypto", "trading", "opportunity", "bitcoin"]
+    quality_score: 87
+    priority: 2
+
+  - name: "Triangular Arbitrage"
+    repo: "bmoscon/cryptofeed"
+    category: "Trading & Finance"
+    description: "Cryptocurrency exchange feed handler with arbitrage detection"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["arbitrage", "crypto", "feed-handler", "trading", "real-time"]
+    quality_score: 91
+    priority: 1
+
+  # Portfolio Optimization
+  - name: "PyPortfolioOpt"
+    repo: "robertmartin8/PyPortfolioOpt"
+    category: "Trading & Finance"
+    description: "Portfolio optimization including efficient frontier and Black-Litterman"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["portfolio", "optimization", "markowitz", "black-litterman", "python"]
+    quality_score: 92
+    priority: 1
+
+  - name: "Riskfolio-Lib"
+    repo: "dcajasn/Riskfolio-Lib"
+    category: "Trading & Finance"
+    description: "Portfolio optimization and risk management library"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["portfolio", "risk", "optimization", "cvar", "python"]
+    quality_score: 91
+    priority: 1
+
+  - name: "FinRL"
+    repo: "AI4Finance-Foundation/FinRL"
+    category: "Trading & Finance"
+    description: "Deep reinforcement learning for quantitative finance"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["reinforcement-learning", "trading", "ai", "portfolio", "deep-learning"]
+    quality_score: 93
+    priority: 1
+
+  # Sentiment Analysis
+  - name: "FinBERT"
+    repo: "ProsusAI/finBERT"
+    category: "Trading & Finance"
+    description: "BERT for financial sentiment analysis"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["sentiment", "nlp", "bert", "finance", "analysis"]
+    quality_score: 90
+    priority: 1
+
+  - name: "VADER Sentiment"
+    repo: "cjhutto/vaderSentiment"
+    category: "Trading & Finance"
+    description: "Sentiment analysis tool for social media and financial texts"
+    doc_paths:
+      - "README.rst"
+    topics: ["sentiment", "analysis", "social-media", "trading", "nlp"]
+    quality_score: 89
+    priority: 2
+
+  # Risk Management
+  - name: "Empyrical"
+    repo: "quantopian/empyrical"
+    category: "Trading & Finance"
+    description: "Financial risk metrics and performance analytics"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["risk", "metrics", "sharpe", "performance", "analytics"]
+    quality_score: 91
+    priority: 1
+
+  - name: "RiskLab"
+    repo: "hudsonthames/mlfinlab"
+    category: "Trading & Finance"
+    description: "Machine learning financial laboratory with advanced algorithms"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["machine-learning", "finance", "risk", "algorithms", "research"]
+    quality_score: 92
+    priority: 1
+
+  # Trading Infrastructure
+  - name: "Arctic"
+    repo: "man-group/arctic"
+    category: "Trading & Finance"
+    description: "High-performance datastore for time series and tick data"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["datastore", "timeseries", "tick-data", "trading", "mongodb"]
+    quality_score: 92
+    priority: 1
+
+  - name: "Nautilus Trader"
+    repo: "nautechsystems/nautilus_trader"
+    category: "Trading & Finance"
+    description: "High-performance algorithmic trading platform"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["trading", "platform", "high-performance", "python", "rust"]
+    quality_score: 93
+    priority: 1
+
+  # Fixed Income
+  - name: "QuantLib Python"
+    repo: "lballabio/QuantLib-SWIG"
+    category: "Trading & Finance"
+    description: "Python bindings for QuantLib fixed income and derivatives"
+    doc_paths:
+      - "Python/examples"
+      - "README.md"
+    topics: ["fixed-income", "bonds", "derivatives", "quantlib", "python"]
+    quality_score: 92
+    priority: 1
+
+  # Crypto DeFi
+  - name: "Uniswap SDK"
+    repo: "Uniswap/sdk-core"
+    category: "Trading & Finance"
+    description: "SDK for interacting with Uniswap decentralized exchange"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["defi", "uniswap", "dex", "crypto", "trading"]
+    quality_score: 91
+    priority: 1
+
+  - name: "Flash Loans"
+    repo: "aave/aave-v3-core"
+    category: "Trading & Finance"
+    description: "DeFi lending protocol with flash loan capabilities"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["defi", "flash-loans", "lending", "aave", "crypto"]
+    quality_score: 92
+    priority: 1
+
+  # Commodity Trading
+  - name: "Commodity Trading"
+    repo: "ranaroussi/pyfixmsg"
+    category: "Trading & Finance"
+    description: "Python library for FIX protocol messaging in commodity and futures trading"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["commodities", "fix-protocol", "futures", "trading", "messaging"]
+    quality_score: 88
+    priority: 2
+
+  - name: "Futures IO"
+    repo: "joliveros/exchange-datafeed"
+    category: "Trading & Finance"
+    description: "Real-time commodity futures data feed handler"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["commodities", "futures", "datafeed", "real-time", "trading"]
+    quality_score: 87
+    priority: 2
+
+  # Energy Markets
+  - name: "PyPSA"
+    repo: "PyPSA/PyPSA"
+    category: "Trading & Finance"
+    description: "Python for Power System Analysis - energy market modeling and optimization"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["energy", "power-systems", "optimization", "markets", "trading"]
+    quality_score: 91
+    priority: 1
+
+  - name: "GridCal"
+    repo: "SanPen/GridCal"
+    category: "Trading & Finance"
+    description: "Power systems analysis for energy trading and grid optimization"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["energy", "grid", "power-trading", "analysis", "optimization"]
+    quality_score: 89
+    priority: 2
+
+  - name: "PYPOWER"
+    repo: "rwl/PYPOWER"
+    category: "Trading & Finance"
+    description: "Power flow and optimal power flow for energy markets"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["energy", "power-flow", "markets", "optimization", "trading"]
+    quality_score: 88
+    priority: 2
+
+  # Fixed Income Analytics
+  - name: "PyBond"
+    repo: "olivierbinette/pybond"
+    category: "Trading & Finance"
+    description: "Fixed income analytics and bond pricing library"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["fixed-income", "bonds", "yield-curve", "pricing", "analytics"]
+    quality_score: 87
+    priority: 2
+
+  - name: "FixedIncome"
+    repo: "tpq/fixedincome"
+    category: "Trading & Finance"
+    description: "Python fixed income securities analytics"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["fixed-income", "bonds", "duration", "convexity", "analytics"]
+    quality_score: 86
+    priority: 2
+
+  - name: "Nelson-Siegel-Svensson"
+    repo: "luphord/nelson_siegel_svensson"
+    category: "Trading & Finance"
+    description: "Yield curve modeling with Nelson-Siegel-Svensson models"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["yield-curve", "fixed-income", "modeling", "bonds", "rates"]
+    quality_score: 89
+    priority: 1
+
+  # Volatility Trading
+  - name: "PyVolLib Black"
+    repo: "vollib/py_vollib_black"
+    category: "Trading & Finance"
+    description: "Black model for volatility and options on futures"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["volatility", "black-model", "options", "futures", "pricing"]
+    quality_score: 90
+    priority: 1
+
+  - name: "Volatility Surface"
+    repo: "QuantLib/QuantLib-Python"
+    category: "Trading & Finance"
+    description: "Volatility surface construction and arbitrage-free interpolation"
+    doc_paths:
+      - "examples"
+      - "README.md"
+    topics: ["volatility", "surface", "interpolation", "options", "calibration"]
+    quality_score: 92
+    priority: 1
+
+  - name: "VIX Trading"
+    repo: "jasonstrimpel/volatility-trading"
+    category: "Trading & Finance"
+    description: "VIX and volatility derivatives trading strategies"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["vix", "volatility", "derivatives", "trading", "strategies"]
+    quality_score: 88
+    priority: 2
+
+  - name: "GARCH Models"
+    repo: "bashtage/arch"
+    category: "Trading & Finance"
+    description: "ARCH, GARCH, and other volatility models for trading"
+    doc_paths:
+      - "doc"
+      - "README.md"
+    topics: ["garch", "volatility", "modeling", "forecasting", "risk"]
+    quality_score: 91
+    priority: 1
+
+  # Statistical Arbitrage
+  - name: "Pairs Trading"
+    repo: "marketneutral/pairs-trading-with-ML"
+    category: "Trading & Finance"
+    description: "Statistical arbitrage pairs trading with machine learning"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["stat-arb", "pairs-trading", "cointegration", "ml", "arbitrage"]
+    quality_score: 89
+    priority: 1
+
+  - name: "Cointegration"
+    repo: "s-boardman/PyPair"
+    category: "Trading & Finance"
+    description: "Cointegration analysis for statistical arbitrage"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["cointegration", "stat-arb", "pairs", "analysis", "trading"]
+    quality_score: 88
+    priority: 2
+
+  - name: "Kalman Filters"
+    repo: "rlabbe/filterpy"
+    category: "Trading & Finance"
+    description: "Kalman filtering for pairs trading and signal extraction"
+    doc_paths:
+      - "docs"
+      - "README.rst"
+    topics: ["kalman-filter", "signal-processing", "pairs-trading", "stat-arb", "filtering"]
+    quality_score: 90
+    priority: 1
+
+  - name: "Mean Reversion"
+    repo: "hudson-and-thames/arbitragelab"
+    category: "Trading & Finance"
+    description: "Statistical arbitrage and mean reversion trading strategies"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["mean-reversion", "stat-arb", "arbitrage", "strategies", "ml"]
+    quality_score: 91
+    priority: 1
+
+  # Market Microstructure
+  - name: "Tick Data"
+    repo: "nickmccullum/algorithmic-trading-bot"
+    category: "Trading & Finance"
+    description: "High-frequency tick data processing and microstructure analysis"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["tick-data", "microstructure", "hft", "order-flow", "analysis"]
+    quality_score: 87
+    priority: 2
+
+  - name: "LOB Dynamics"
+    repo: "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy"
+    category: "Trading & Finance"
+    description: "Limit order book dynamics and microstructure trading"
+    doc_paths:
+      - "docs"
+      - "README.md"
+    topics: ["order-book", "microstructure", "dynamics", "hft", "trading"]
+    quality_score: 88
+    priority: 2
