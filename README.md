@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/boodrow-mcp-server-unified-docs-hub-badge.png)](https://mseep.ai/app/boodrow-mcp-server-unified-docs-hub)
+
 # 🚀 Unified Docs Hub - The Ultimate MCP Documentation Server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
