@@ -1,3 +1,5 @@
+[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/3ae69b1a-074a-45c2-8445-bae75239ce92)
+
 # 🚀 Unified Docs Hub - The Ultimate MCP Documentation Server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
